@@ -18,5 +18,13 @@
     <ClCompile Include="Source.cpp">
       <Filter>Header Files</Filter>
     </ClCompile>
+    <ClCompile Include="RPNCalculator.cpp">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="RPNCalculator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
