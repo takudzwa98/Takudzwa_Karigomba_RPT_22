@@ -15,3 +15,10 @@ T RPNCalculator<T>::pop()
     stackdata.pop();
     return result;
 }
+
+// tests to see if there are elements on the stack - j o h n n y t u o t _ G
+template<class T>
+bool RPNCalculator<T>::isEmpty()
+{
+    return stackdata.empty();
+}
