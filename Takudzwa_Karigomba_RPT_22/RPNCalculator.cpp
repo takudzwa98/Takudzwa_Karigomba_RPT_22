@@ -22,3 +22,14 @@ bool RPNCalculator<T>::isEmpty()
 {
     return stackdata.empty();
 }
+
+// clears out the stack
+template<class T>
+void RPNCalculator<T>::clear()
+{
+    while (!stackdata.empty())
+    {
+        stackdata.pop();
+    }
+    logOutput << " clear";
+}
