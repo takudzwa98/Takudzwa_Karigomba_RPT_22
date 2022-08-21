@@ -1,9 +1,10 @@
+
 #ifndef RPNCALCULATOR_H_
 #define RPNCALCULATOR_H_
 
-#include "RPNCalculator.cpp"
 #include <stack>
 #include <fstream>
+#define LOG_FILENAME "RPN.log"
 
 template<class T> class RPNCalculator
 {
@@ -12,7 +13,9 @@ private:
      * 1. You MUST use an instance of a Stack
      * 2. The following functions are to be implemented as defined for RP
      */
- 
+    std::stack<T> stackdata;
+    std::ofstream logOutput;
+
 public:
     // pushes a new operand onto the stack
     void push(T operand);
@@ -39,4 +42,5 @@ public:
     ~RPNCalculator();
 };
 
+#include "RPNCalculator.cpp"
 #endif /* RPNCALCULATOR_H_ */
