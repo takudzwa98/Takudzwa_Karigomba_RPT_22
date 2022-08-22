@@ -23,6 +23,13 @@ bool RPNCalculator<T>::isEmpty()
     return stackdata.empty();
 }
 
+// Pushes a new element at the end of the stack
+template<class T>
+void RPNCalculator<T>::push(T operand)
+{
+    return;
+}
+
 // clears out the stack
 template<class T>
 void RPNCalculator<T>::clear()
