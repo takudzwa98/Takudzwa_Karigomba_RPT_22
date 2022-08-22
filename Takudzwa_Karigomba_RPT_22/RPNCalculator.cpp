@@ -46,3 +46,9 @@ RPNCalculator<T>::RPNCalculator()
 {
     logOutput.open(LOG_FILENAME);
 }
+
+template<class T>
+RPNCalculator<T>::~RPNCalculator()
+{
+    logOutput.close();
+}
