@@ -27,7 +27,7 @@ bool RPNCalculator<T>::isEmpty()
 template<class T>
 void RPNCalculator<T>::push(T operand)
 {
-    return;
+    stackdata.push(operand);
 }
 
 // clears out the stack
