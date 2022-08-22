@@ -40,3 +40,9 @@ void RPNCalculator<T>::clear()
     }
     logOutput << " clear";
 }
+
+template<class T>
+RPNCalculator<T>::RPNCalculator()
+{
+    logOutput.open(LOG_FILENAME);
+}
