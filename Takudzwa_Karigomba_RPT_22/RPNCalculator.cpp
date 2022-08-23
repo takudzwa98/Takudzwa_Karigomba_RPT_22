@@ -23,6 +23,21 @@ void RPNCalculator<T>::add()
         logOutput << "+";
         return;
     }
+    // If after getting the first operand the stack is not empty, get the second operand
+    if (!stackdata.empty())
+    {
+        operand2 = stackdata.top();
+        stackdata.pop();
+    }
+
+    else // stack is empty
+    {
+        logOutput << " + " << operand1;
+        return;
+    }
+   operand1 + operand2;
+  
+}
 
 // returns the topmost value and pops it off the top
 template<class T>
