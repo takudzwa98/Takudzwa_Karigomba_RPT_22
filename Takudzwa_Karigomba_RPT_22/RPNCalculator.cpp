@@ -6,6 +6,24 @@ void RPNCalculator<T>::push(T operand)
     stackdata.push(operand);
 }
 
+
+// adds the last two elements in the stack
+template<class T>
+void RPNCalculator<T>::add()
+{
+    T operand1, operand2;
+    // Get the last element in the stack if it is not empty
+    if (!stackdata.empty())
+    {
+        operand1 = stackdata.top();
+        stackdata.pop();
+    }
+    else // the stack is empty
+    {
+        logOutput << "+";
+        return;
+    }
+
 // returns the topmost value and pops it off the top
 template<class T>
 T RPNCalculator<T>::pop()
@@ -52,3 +70,4 @@ RPNCalculator<T>::~RPNCalculator()
 {
     logOutput.close();
 }
+
