@@ -70,6 +70,7 @@ void RPNCalculator<T>::subtract()
     }
     T result = operand2 - operand1;
     stackdata.push(result);
+
     logOutput << operand2 << " - " << operand1;
 }
 
