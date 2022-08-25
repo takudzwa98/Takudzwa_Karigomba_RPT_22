@@ -39,6 +39,40 @@ void RPNCalculator<T>::add()
   
 }
 
+// Subract the last two elements in the stack
+template<class T>
+void RPNCalculator<T>::subtract()
+{
+    T operand1, operand2;
+    // Get the last element in the stack if it is not empty
+    if (!stackdata.empty())
+    {
+        operand1 = stackdata.top();
+        stackdata.pop();
+    }
+    else // the stack is empty
+    {
+        logOutput << "-";
+        return;
+    }
+
+    // If after getting the first operand the stack is not empty, get the second operand
+    if (!stackdata.empty())
+    {
+        operand2 = stackdata.top();
+        stackdata.pop();
+    }
+
+    else // stack is empty
+    {
+        logOutput << " - " << operand1;
+        return;
+    }
+    T result = operand2 - operand1;
+    stackdata.push(result);
+    logOutput << operand2 << " - " << operand1;
+}
+
 // returns the topmost value and pops it off the top
 template<class T>
 T RPNCalculator<T>::pop()
