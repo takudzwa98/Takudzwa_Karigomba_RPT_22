@@ -90,6 +90,22 @@ void RPNCalculator<T>::multiply()
         return;
     }
 
+    if (!stackdata.empty())
+    {
+        operand2 = stackdata.top();
+        stackdata.pop();
+    }
+
+    else // stack is empty
+    {
+        logOutput << " * " << operand1;
+        return;
+    }
+    T result = operand1 * operand2;
+    stackdata.push(result);
+    logOutput << operand2 << " * " << operand1;
+}
+
 // returns the topmost value and pops it off the top
 template<class T>
 T RPNCalculator<T>::pop()
