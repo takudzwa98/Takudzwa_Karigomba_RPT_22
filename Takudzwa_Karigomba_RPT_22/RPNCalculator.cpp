@@ -101,7 +101,7 @@ void RPNCalculator<T>::multiply()
         logOutput << " * " << operand1;
         return;
     }
-    T result = operand1 * operand2;
+    T result = operand1 * operand2 ;
     stackdata.push(result);
     logOutput << operand2 << " * " << operand1;
 }
