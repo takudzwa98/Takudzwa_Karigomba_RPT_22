@@ -136,6 +136,46 @@ void RPNCalculator<T>::divide()
     stackdata.push(result);
     logOutput << operand2 << " / " << operand1;
 }
+// squares the current value
+template<class T>
+void RPNCalculator<T>::square()
+{
+    logOutput << " square";
+    T operand1;
+
+    if (!stackdata.empty())
+    {
+        operand1 = stackdata.top();
+        stackdata.pop();
+    }
+    else 
+    {
+        return;
+    }
+
+    // calculates the square of the element x: x^2 = x*x
+    T result = operand1 * operand1;
+    stackdata.push(result);
+
+}
+// negates, i.e. 3 becomes -3
+template<class T>
+void RPNCalculator<T>::negate()
+{
+    logOutput << " negate";
+    T operand1;
+    if (!stackdata.empty())
+    {
+        operand1 = stackdata.top();
+        stackdata.pop();
+    }
+    else
+    {
+        return;
+    }
+    T result = operand1 * -1;
+    stackdata.push(result);
+}
 // returns the topmost value and pops it off the top
 template<class T>
 T RPNCalculator<T>::pop()
