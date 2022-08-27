@@ -105,7 +105,37 @@ void RPNCalculator<T>::multiply()
     stackdata.push(result);
     logOutput << operand2 << " * " << operand1;
 }
+template<class T>
+void RPNCalculator<T>::divide()
+{
+    T operand1, operand2;
+    // Get the last element in the stack if it is not empty
+    if (!stackdata.empty())
+    {
+        operand1 = stackdata.top();
+        stackdata.pop();
+    }
+    else // the stack is empty
+    {
+        logOutput << "/";
+        return;
+    }
 
+    if (!stackdata.empty())
+    {
+        operand2 = stackdata.top();
+        stackdata.pop();
+    }
+
+    else 
+    {
+        logOutput << " / " << operand1;
+        return;
+    }
+    T result = operand2 / operand1;
+    stackdata.push(result);
+    logOutput << operand2 << " / " << operand1;
+}
 // returns the topmost value and pops it off the top
 template<class T>
 T RPNCalculator<T>::pop()
