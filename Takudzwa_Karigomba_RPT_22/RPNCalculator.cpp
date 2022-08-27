@@ -73,6 +73,22 @@ void RPNCalculator<T>::subtract()
 
     logOutput << operand2 << " - " << operand1;
 }
+// multiplies the last two elements in the stack
+template<class T>
+void RPNCalculator<T>::multiply()
+{
+    T operand1, operand2;
+    // Get the last element in the stack if it is not empty
+    if (!stackdata.empty())
+    {
+        operand1 = stackdata.top();
+        stackdata.pop();
+    }
+    else // the stack is empty
+    {
+        logOutput << "*";
+        return;
+    }
 
 // returns the topmost value and pops it off the top
 template<class T>
