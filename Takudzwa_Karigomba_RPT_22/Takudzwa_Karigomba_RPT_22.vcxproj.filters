@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Source.cpp">
+    <ClCompile Include="Driver.cpp">
       <Filter>Header Files</Filter>
     </ClCompile>
     <ClCompile Include="RPNCalculator.cpp">
@@ -26,5 +26,10 @@
     <ClInclude Include="RPNCalculator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\..\Downloads\PHH_09.08.2022_Takudzwa (1)\Assignment2\Makefile">
+      <Filter>Header Files</Filter>
+    </None>
   </ItemGroup>
 </Project>

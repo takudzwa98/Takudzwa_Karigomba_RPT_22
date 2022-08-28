@@ -1,4 +1,3 @@
-
 #ifndef RPNCALCULATOR_H_
 #define RPNCALCULATOR_H_
 
@@ -41,6 +40,4 @@ public:
     RPNCalculator();
     ~RPNCalculator();
 };
-
-#include "RPNCalculator.cpp"
 #endif /* RPNCALCULATOR_H_ */
