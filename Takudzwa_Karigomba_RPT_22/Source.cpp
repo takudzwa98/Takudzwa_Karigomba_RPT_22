@@ -12,3 +12,9 @@ void printMenu()
     cout << "p to pop current value" << endl;
     cout << "q to quit" << endl;
 }
+void removeEndline(string& input)
+{
+    for (size_t i = 0; i < input.length(); i++)
+        if (input[i] == '\n' || input[i] == '\r')
+            input.erase(input.begin() + i);
+}
