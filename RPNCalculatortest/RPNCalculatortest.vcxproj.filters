@@ -15,21 +15,16 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Driver.cpp">
+    <ClCompile Include="RPNCalculatortest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="RPNCalculator.cpp">
+    <ClCompile Include="pch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="RPNCalculator.h">
+    <ClInclude Include="pch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\..\..\..\Downloads\PHH_09.08.2022_Takudzwa (1)\Assignment2\Makefile">
-      <Filter>Header Files</Filter>
-    </None>
   </ItemGroup>
 </Project>
