@@ -51,5 +51,12 @@ namespace RPNCalculatortest
 			calculator.divide();
 			Assert::AreEqual(5.0, calculator.value());
 		}
+		TEST_METHOD(Test_square)
+		{
+			RPNCalculator<double> calculator;
+			calculator.push(6);
+			calculator.square();
+			Assert::AreEqual(36.0, calculator.value());
+		}
 	};
 }
