@@ -7,7 +7,9 @@ using namespace std;
 
 
 void printMenu()
+
 {
+    cout << "Welcome to the RPNCalculator by Takudzwa Karigomba" << endl;
     cout << "Enter c to clear the stack" << endl;
     cout << "s to square" << endl;
     cout << "n to negate" << endl;
