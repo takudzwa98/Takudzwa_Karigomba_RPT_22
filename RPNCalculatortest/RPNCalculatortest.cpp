@@ -84,7 +84,7 @@ namespace RPNCalculatortest
 			//Creating a list then push and clear. calculator should be empty
 			RPNCalculator<int> calculator;
 			for (int i = 0; i < 7; i++) {
-				calculator.push(i);
+				calculator.push(i) ;
 			}
 
 			calculator.clear();

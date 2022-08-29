@@ -8,6 +8,8 @@ void RPNCalculator<T>::push(T operand)
     stackdata.push(operand);
 }
 
+//h ttps://www.programiz.com/cpp-programming/examples/calculator-switch-case methods
+// h ttps://www.cprogramming.com/snippets/source-code/template-calculator
 // adds the last two elements in the stack
 template<class T>
 void RPNCalculator<T>::add()
@@ -157,6 +159,7 @@ void RPNCalculator<T>::square()
 }
 
 // negates, i.e. 3 becomes -3
+// h ttps://stackoverflow.com/questions/15111466/fastest-way-to-negate-a-number
 template<class T>
 void RPNCalculator<T>::negate()
 {
