@@ -21,11 +21,12 @@ namespace RPNCalculatortest
 		}
 		TEST_METHOD(Test_Add2)
 		{
+			//testing if the value is not equal to the answer should fail
 			RPNCalculator<double> calculator;
 			calculator.push(5);
 			calculator.push(4);
 			calculator.add();
-			Assert::AreNotEqual(7.0, calculator.value());
+			Assert::AreNotEqual(9.0, calculator.value());
 		}
 		TEST_METHOD(Test_subtract)
 		{
@@ -33,7 +34,7 @@ namespace RPNCalculatortest
 			calculator.push(2.0);
 			calculator.push(9.0);
 			calculator.subtract();
-			Assert::AreEqual(7.0, calculator.value());
+			Assert::AreEqual(-7.0, calculator.value());
 		}
 		TEST_METHOD(Test_multiply)
 		{
@@ -64,6 +65,48 @@ namespace RPNCalculatortest
 			calculator.push(18);
 			calculator.negate();
 			Assert::AreEqual(-18.0, calculator.value());
+		}
+
+		TEST_METHOD(Test_pop)
+		{
+			RPNCalculator<int> calculator;
+			calculator.push(5);
+			calculator.push(0);
+			calculator.push(3);
+			int top = calculator.pop();
+			Assert::AreEqual(3, top);
+
+		}
+
+
+		TEST_METHOD(Test_clear)
+		{
+			//Creating a list then push and clear. calculator should be empty
+			RPNCalculator<int> calculator;
+			for (int i = 0; i < 7; i++) {
+				calculator.push(i);
+			}
+
+			calculator.clear();
+			Assert::IsTrue(calculator.isEmpty());
+		}
+		TEST_METHOD(Test_clear2)
+		{
+			//Creating a list then push and clear. calculator should `fail
+			RPNCalculator<int> calculator;
+			for (int i = 0; i < 7; i++) {
+				calculator.push(i);
+			}
+
+			calculator.clear();
+			Assert::IsFalse(calculator.isEmpty());
+		}
+
+		TEST_METHOD(Test_empty)
+		{
+			//empty so should pass no values pushed
+			RPNCalculator<double> calculator;
+			Assert::IsTrue(calculator.isEmpty());
 		}
 	};
 }

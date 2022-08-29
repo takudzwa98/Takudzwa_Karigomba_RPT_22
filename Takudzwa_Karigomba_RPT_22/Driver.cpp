@@ -5,6 +5,7 @@
 #include "RPNCalculator.cpp"
 using namespace std;
 
+
 void printMenu()
 {
     cout << "Enter c to clear the stack" << endl;
@@ -33,6 +34,7 @@ int main(int argc, char** argv)
     printMenu();
     while (true)
     {
+        //h ttps://www.youtube.com/watch?v=o4pc33N6jOo
         if (calculator.isEmpty())
         {
             cout << "X> ";
@@ -84,6 +86,7 @@ int main(int argc, char** argv)
         {
             try
             {
+                //h ttps://cplusplus.com/reference/string/stod/
                 double operand = std::stod(input.c_str());
                 calculator.push(operand);
             }
