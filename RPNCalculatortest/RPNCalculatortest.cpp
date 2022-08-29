@@ -19,7 +19,7 @@ namespace RPNCalculatortest
 			calculator.add();
 			Assert::AreEqual(9.0, calculator.value());
 		}
-		TEST_METHOD(Test_Add)
+		TEST_METHOD(Test_Add2)
 		{
 			RPNCalculator<double> calculator;
 			calculator.push(5);
@@ -30,10 +30,18 @@ namespace RPNCalculatortest
 		TEST_METHOD(Test_subtract)
 		{
 			RPNCalculator<double> calculator;
-			calculator.push(2);
-			calculator.push(10);
+			calculator.push(2.0);
+			calculator.push(9.0);
 			calculator.subtract();
-			Assert::AreEqual(8.0, calculator.value());
+			Assert::AreEqual(7.0, calculator.value());
+		}
+		TEST_METHOD(Test_multiply)
+		{
+			RPNCalculator<double> calculator;
+			calculator.push(5);
+			calculator.push(5);
+			calculator.multiply();
+			Assert::AreEqual(25.0, calculator.value());
 		}
 	};
 }
